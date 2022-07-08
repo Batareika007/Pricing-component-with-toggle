@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 @import 'colors';
 
 
@@ -9,6 +10,21 @@
     padding: 0;
     margin: 0;
     border: 0;
+}
+
+body {
+    font-family: 'Montserrat',
+        sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    // background-image: url(../images/bg-top.svg) url(../images/bg-bottom.svg);
+    // background-color: $bgColor;
+    background-color: hsl(240, 78%, 98%);
+    background-position: top right, bottom left;
+}
+
+ul li {
+    list-style: none;
 }
 
 img {
@@ -60,4 +76,137 @@ select {
     width: 100%;
     margin: 0 auto;
     padding: 0 1.5rem;
+}
+
+header {
+    text-align: center;
+    margin: 1rem 0;
+
+    h1 {
+        margin: 1rem 0;
+    }
+}
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+
+    &__trg {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 60px;
+        height: 30px;
+        border-radius: 50px;
+        background: $gradientBg;
+        padding: 0 5px;
+        margin: 0 10px;
+        cursor: pointer;
+
+        &_ball {
+            position: absolute;
+            width: 23px;
+            height: 23px;
+            border-radius: 25px;
+            background-color: white;
+
+        }
+
+        .active {
+            right: 5px;
+        }
+    }
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    min-width: 300px;
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+
+    &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    &__header {
+        margin-bottom: 1rem;
+    }
+
+    &__price {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+
+        &_big,
+        &_small {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    }
+
+    &__list {
+        margin-bottom: 1rem;
+
+        li {
+            padding: 1rem 0;
+            border-top: 1px solid black;
+
+            &:last-child {
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+
+    &__submit {
+        width: 100%;
+        background: $gradientBg;
+        line-height: 200%;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+
+
+    }
+
+    &-middle {
+        padding: 3rem 1rem;
+        color: white;
+        background: $gradientBg;
+
+        .card__list li {
+            border-top: solid 1px white;
+
+            &:last-child {
+                border-bottom: solid 1px white;
+            }
+        }
+
+        .card__submit {
+            color: hsl(237, 63%, 64%);
+            background: white;
+        }
+    }
+}
+
+footer {
+    margin: 1rem 0;
 }

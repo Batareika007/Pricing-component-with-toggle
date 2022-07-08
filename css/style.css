@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+/** ============== global style ================ */
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: hsl(240deg, 78%, 98%);
+  background-position: top right, bottom left;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  border-style: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+
+/* hide scroll bar if needed */
+.hide-scroll {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.flex-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* remove 'X' from input box to clear the text*/
+input::-ms-clear {
+  display: none;
+}
+
+/* remove arrow from select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* text-indent: 1px; */
+  /* text-overflow: ''; */
+}
+
+/** ============ start  custom style ============ */
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+header {
+  text-align: center;
+  margin: 1rem 0;
+}
+header h1 {
+  margin: 1rem 0;
+}
+
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3rem;
+}
+.toggle__trg {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 30px;
+  border-radius: 50px;
+  background: linear-gradient(130deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  padding: 0 5px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+.toggle__trg_ball {
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border-radius: 25px;
+  background-color: white;
+}
+.toggle__trg .active {
+  right: 5px;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.card {
+  min-width: 300px;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+}
+.card:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.card:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.card__header {
+  margin-bottom: 1rem;
+}
+.card__price {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.card__price_big, .card__price_small {
+  display: none;
+}
+.card__price .active {
+  display: block;
+}
+.card__list {
+  margin-bottom: 1rem;
+}
+.card__list li {
+  padding: 1rem 0;
+  border-top: 1px solid black;
+}
+.card__list li:last-child {
+  border-bottom: 1px solid black;
+}
+.card__submit {
+  width: 100%;
+  background: linear-gradient(130deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+  line-height: 200%;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.card-middle {
+  padding: 3rem 1rem;
+  color: white;
+  background: linear-gradient(130deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
+}
+.card-middle .card__list li {
+  border-top: solid 1px white;
+}
+.card-middle .card__list li:last-child {
+  border-bottom: solid 1px white;
+}
+.card-middle .card__submit {
+  color: hsl(237deg, 63%, 64%);
+  background: white;
+}
+
+footer {
+  margin: 1rem 0;
+}
