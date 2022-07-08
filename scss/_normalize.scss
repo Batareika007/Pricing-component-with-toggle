@@ -1,0 +1,17 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/** added style non normalize */
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+img {
+    border-style: none;
+    object-fit: cover;
+    max-width: 100%;
+}
