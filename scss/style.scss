@@ -13,15 +13,18 @@
 }
 
 body {
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
     font-family: 'Montserrat',
         sans-serif;
     font-weight: 700;
     font-size: 15px;
-    // background-image: url(../images/bg-top.svg) url(../images/bg-bottom.svg);
-    // background-color: $bgColor;
-    background-color: hsl(240, 78%, 98%);
-    background-position: top right, bottom left;
+    background: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
+    background-color: $liteColor;
+    background-repeat: no-repeat;
+    background-position: right top, bottom left;
 }
 
 ul li {
@@ -86,10 +89,10 @@ small {
 
 header {
     text-align: center;
-    margin: 1rem 0;
 
     h1 {
-        margin: 1rem 0;
+        color: $darkTextColor;
+        margin-bottom: 1rem;
     }
 }
 
@@ -97,7 +100,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3rem;
+    color: $bgColor;
 
     &__trg {
         position: relative;
@@ -157,12 +160,13 @@ main {
 
     &__header {
         margin-bottom: 1rem;
+        color: $liteTextColor;
     }
 
     &__price {
         font-size: 3rem;
         margin-bottom: 1rem;
-
+        color: $darkTextColor;
 
         &_big,
         &_small {
@@ -181,11 +185,15 @@ main {
         margin-bottom: 1rem;
 
         li {
+            color: $liteTextColor;
             padding: 1rem 0;
-            border-top: 1px solid black;
+            border-top: 1px solid $bgColor;
+
+
 
             &:last-child {
-                border-bottom: 1px solid black;
+                border-bottom: 1px solid $bgColor;
+                ;
             }
         }
     }
@@ -213,13 +221,17 @@ main {
         color: white;
         background: $gradientBg;
 
+        .card__header {
+            color: white;
+        }
+
         .card__list li {
-            border-top: solid 1px white;
+            color: white;
+            // border-top: solid 1px white;
+        }
 
-            &:last-child {
-                border-bottom: solid 1px white;
-            }
-
+        .card__price {
+            color: white;
         }
 
         .card__submit {
@@ -236,12 +248,16 @@ main {
     }
 }
 
-footer {
-    margin: 1rem 0;
-}
 
 
 @media screen and (max-width:1024px) {
+    body {
+        margin: 1rem 0;
+        gap: 2rem;
+        background-position: calc(100% + 50vw) -10%,
+            bottom left;
+    }
+
     .container {
         flex-direction: column;
         gap: 1rem;

@@ -11,12 +11,23 @@
 }
 
 body {
-  overflow-x: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 100vh;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 15px;
+  background: url(../images/bg-top.svg), url(../images/bg-bottom.svg);
   background-color: hsl(240deg, 78%, 98%);
-  background-position: top right, bottom left;
+  background-repeat: no-repeat;
+  background-position: right top, bottom left;
 }
 
 ul li {
@@ -80,10 +91,10 @@ small {
 
 header {
   text-align: center;
-  margin: 1rem 0;
 }
 header h1 {
-  margin: 1rem 0;
+  color: hsl(232deg, 13%, 33%);
+  margin-bottom: 1rem;
 }
 
 .toggle {
@@ -96,7 +107,7 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 3rem;
+  color: hsl(234deg, 14%, 74%);
 }
 .toggle__trg {
   position: relative;
@@ -158,10 +169,12 @@ main {
 }
 .card__header {
   margin-bottom: 1rem;
+  color: hsl(233deg, 13%, 49%);
 }
 .card__price {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: hsl(232deg, 13%, 33%);
 }
 .card__price_big, .card__price_small {
   display: none;
@@ -182,11 +195,12 @@ main {
   margin-bottom: 1rem;
 }
 .card__list li {
+  color: hsl(233deg, 13%, 49%);
   padding: 1rem 0;
-  border-top: 1px solid black;
+  border-top: 1px solid hsl(234deg, 14%, 74%);
 }
 .card__list li:last-child {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid hsl(234deg, 14%, 74%);
 }
 .card__submit {
   width: 100%;
@@ -207,11 +221,14 @@ main {
   color: white;
   background: linear-gradient(130deg, hsl(236deg, 72%, 79%) 0%, hsl(237deg, 63%, 64%) 100%);
 }
-.card-middle .card__list li {
-  border-top: solid 1px white;
+.card-middle .card__header {
+  color: white;
 }
-.card-middle .card__list li:last-child {
-  border-bottom: solid 1px white;
+.card-middle .card__list li {
+  color: white;
+}
+.card-middle .card__price {
+  color: white;
 }
 .card-middle .card__submit {
   color: hsl(237deg, 63%, 64%);
@@ -223,11 +240,12 @@ main {
   color: white;
 }
 
-footer {
-  margin: 1rem 0;
-}
-
 @media screen and (max-width: 1024px) {
+  body {
+    margin: 1rem 0;
+    gap: 2rem;
+    background-position: calc(100% + 50vw) -10%, bottom left;
+  }
   .container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

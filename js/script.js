@@ -1,6 +1,6 @@
 gsap.from('#card1', {
     x: -700,
-    ease: "elastic.out(1, 2)",
+    ease: "elastic.out(1, 2q)",
     duration: 2,
     delay: 0.1,
 });
