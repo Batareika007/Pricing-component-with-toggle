@@ -11,6 +11,7 @@
 }
 
 body {
+  overflow-x: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,7 +83,7 @@ select {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 1.5rem;
 }
 
 small {
@@ -155,6 +156,7 @@ main {
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
+  overflow: hidden;
 }
 .card:nth-of-type(even) {
   z-index: 10;
@@ -193,6 +195,7 @@ main {
 }
 .card__list {
   margin-bottom: 1rem;
+  height: auto;
 }
 .card__list li {
   color: hsl(233deg, 13%, 49%);

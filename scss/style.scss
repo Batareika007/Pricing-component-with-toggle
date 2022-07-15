@@ -13,6 +13,7 @@
 }
 
 body {
+    overflow-x: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -79,7 +80,7 @@ select {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 1.5rem;
 }
 
 small {
@@ -143,6 +144,7 @@ main {
     border-radius: 1rem;
     padding: 2rem;
     text-align: center;
+    overflow: hidden;
 
     &:nth-of-type(even) {
         z-index: 10;
@@ -183,6 +185,7 @@ main {
 
     &__list {
         margin-bottom: 1rem;
+        height: auto;
 
         li {
             color: $liteTextColor;
