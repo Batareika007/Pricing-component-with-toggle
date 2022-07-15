@@ -5,6 +5,7 @@ timeline.from('html', {
         duration: 2
     })
     .from('h1', {
+        opacity: 0,
         y: '-200%'
     })
     .from('.toggle__left', {
